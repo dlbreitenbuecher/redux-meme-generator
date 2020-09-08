@@ -1,0 +1,26 @@
+.Meme-container {
+  position: relative;
+  color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  font-size:40px;
+  width: 500px
+}
+
+img {
+  width: 100%;
+}
+
+.topText {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bottomText {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -10,7 +10,7 @@ function memeReducer(state=[], action) {
 
     case 'REMOVE':
       return state.filter( meme => (
-        meme.id !== action.payload.id 
+        meme.id !== action.payload
       ));
 
     default:

@@ -11,7 +11,7 @@ import React, { useState } from 'react';
 */
 function NewMemeForm({ createMeme }) {
   const initialFormData = {
-    id: '',
+    // id: '',
     src: '',
     topText: '',
     bottomText: ''
@@ -19,13 +19,13 @@ function NewMemeForm({ createMeme }) {
   
   const [formData, setFormData] = useState(initialFormData);
 
-  // function handleChange(evt) {
-  //   const { name, value } = evt.target;
-  //   setFormData( formData => ({
-  //     ...formData,
-  //     [name]: value,
-  //   }));
-  // }
+  function handleChange(evt) {
+    const { name, value } = evt.target;
+    setFormData( formData => ({
+      ...formData,
+      [name]: value,
+    }));
+  }
 
   function handleSubmit(evt) {
     evt.preventDefault();
@@ -37,16 +37,16 @@ function NewMemeForm({ createMeme }) {
 
     <form onSubmit={handleSubmit}>
 
-      {/* <label htmlFor='src'>Image URL:</label>
-      <input name='src' value={formData.src} onChange={handleChange} /> */}
-{/* 
+      <label htmlFor='src'>Image URL:</label>
+      <input name='src' value={formData.src} onChange={handleChange} />
+
       <label htmlFor='topText'>Top Text:</label>
-      <input name='topText' value={formData.topText} onChange={handleChange} /> */}
-{/* 
-      <label htmlFor='bottomText'>Bottom Text::</label>
+      <input name='topText' value={formData.topText} onChange={handleChange} />
+
+      <label htmlFor='bottomText'>Bottom Text:</label>
       <input name='bottomText' value={formData.bottomText} onChange={handleChange} />
 
-      <button>Submit</button> */}
+      <button>Submit</button>
     </form>
 
   );
